@@ -1,0 +1,54 @@
+[System]
+Name='Car_FLC'
+Type='mamdani'
+Version=2.0
+NumInputs=3
+NumOutputs=1
+NumRules=0
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='d_V'
+Range=[0 1]
+NumMFs=5
+MF1='VS':'trimf',[-0.25 0 0.25]
+MF2='M':'trimf',[0.25 0.5 0.75]
+MF3='VL':'trimf',[0.75 1 1.25]
+MF4='S':'trimf',[0 0.25 0.5]
+MF5='L':'trimf',[0.5 0.75 1]
+
+[Input2]
+Name='d_H'
+Range=[0 1]
+NumMFs=5
+MF1='VS':'trimf',[-0.25 0 0.25]
+MF2='M':'trimf',[0.25 0.5 0.75]
+MF3='VL':'trimf',[0.75 1 1.25]
+MF4='S':'trimf',[0 0.25 0.5]
+MF5='L':'trimf',[0.5 0.75 1]
+
+[Input3]
+Name='theta'
+Range=[-180 180]
+NumMFs=5
+MF1='NL':'trimf',[-270 -180 -90]
+MF2='ZE':'trimf',[-90 0 90]
+MF3='PL':'trimf',[90 180 270]
+MF4='NS':'trimf',[-180 -90 0]
+MF5='PS':'trimf',[0 90 180]
+
+[Output1]
+Name='d_theta'
+Range=[-130 130]
+NumMFs=5
+MF1='NL':'trimf',[-195 -130 -65]
+MF2='ZE':'trimf',[-65 0 65]
+MF3='PL':'trimf',[65 130 195]
+MF4='NS':'trimf',[-130 -65 0]
+MF5='PS':'trimf',[0 65 130]
+
+[Rules]

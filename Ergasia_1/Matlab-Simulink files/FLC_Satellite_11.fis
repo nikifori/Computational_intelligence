@@ -1,0 +1,54 @@
+[System]
+Name='FLC_Satellite_11'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=0
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='Ε'
+Range=[-1 1]
+NumMFs=9
+MF1='NL':'trimf',[-1 -0.75 -0.5]
+MF2='ZR':'trimf',[-0.25 0 0.25]
+MF3='PM':'trimf',[0.25 0.5 0.75]
+MF4='NV':'trimf',[-1.25 -1 -0.75]
+MF5='NM':'trimf',[-0.75 -0.5 -0.25]
+MF6='PS':'trimf',[0 0.25 0.5]
+MF7='PL':'trimf',[0.5 0.75 1]
+MF8='PV':'trimf',[0.75 1 1.25]
+MF9='NS':'trimf',[-0.5 -0.25 0]
+
+[Input2]
+Name='dE/dt'
+Range=[-1 1]
+NumMFs=9
+MF1='NL':'trimf',[-1 -0.75 -0.5]
+MF2='ZR':'trimf',[-0.25 0 0.25]
+MF3='PL':'trimf',[0.5 0.75 1]
+MF4='NV':'trimf',[-1.25 -1 -0.75]
+MF5='NM':'trimf',[-0.75 -0.5 -0.25]
+MF6='NS':'trimf',[-0.5 -0.25 0]
+MF7='PS':'trimf',[0 0.25 0.5]
+MF8='PM':'trimf',[0.25 0.5 0.75]
+MF9='PV':'trimf',[0.75 1 1.25]
+
+[Output1]
+Name='dU/dt'
+Range=[-1 1]
+NumMFs=7
+MF1='NM':'trimf',[-1 -0.666666666666667 -0.333333333333333]
+MF2='ZR':'trimf',[-0.333333333333333 0 0.333333333333333]
+MF3='PM':'trimf',[0.333333333333333 0.666666666666667 1]
+MF4='NL':'trimf',[-1.333 -1 -0.6667]
+MF5='NS':'trimf',[-0.666666666666667 -0.333333333333333 0]
+MF6='PS':'trimf',[0 0.333333333333333 0.666666666666667]
+MF7='PL':'trimf',[0.666666666666667 1 1.33333333333333]
+
+[Rules]
