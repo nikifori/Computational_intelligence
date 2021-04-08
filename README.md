@@ -1,2 +1,2 @@
 # Computational_intelligence
- Computational_intelligence/Fuzzy_systems
+ Computational_intelligence/Fuzzy_systems project.
